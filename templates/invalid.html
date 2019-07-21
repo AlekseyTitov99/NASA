@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+  <div class="logo">
+    <img src="https://i.imgur.com/OmUg65a.png" alt="Nasa Logo" height="400px" width="700px">
+  </div>
+  <div>
+    <form action="{{ url_for('data') }}" name="key" method="post">
+      	<label>INVALID API KEY</label>
+        <input type="text" placeholder="Please try another one.." name="api">
+    </form>
+  </div>
+</body>
+
+</html>
+
+<style>
+
+body {
+	display: flex;
+  	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://i.imgur.com/Uiz2dgm.gif');
+    background-size: cover;
+    height: 100vh;
+    padding:0;
+    margin:0;
+}
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+    color: red;
+	text-align: center;
+ 	font-family: impact;
+ 	font-size: 350%;
+}
+
+input {
+	height: 50px;
+  width: 300px;
+  font-size: 24px;
+  padding: 10px;
+  background-color: #23244c;
+  border: 3px solid #BB6431;
+  color: white;
+}
+
+input::placeholder {
+	color: #E4AE2F;
+}
+
+</style>
