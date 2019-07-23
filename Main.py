@@ -19,8 +19,12 @@ def data():
         if key == 'error':
             return invalid()
 
-    app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
-    return fixed_json
+    title = fixed_json['title']
+    date = fixed_json['date']
+    exp = fixed_json['explanation']
+    image = fixed_json['url']
+
+    return render_template("result.html", title=title, date=date, exp=exp, image=image)
 
 @app.route("/invalid")
 def invalid():
