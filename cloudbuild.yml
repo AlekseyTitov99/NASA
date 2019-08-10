@@ -1,4 +1,5 @@
 steps:
   - name: 'gcr.io/cloud-builders/git'
     args: ['clone', 'https://github.com/AlekseyTitov99/NASA']
-#    env: ['PROJECT_ROOT=hello']
+  - name: "gcr.io/cloud-builders/gcloud"
+    args: ["app", "deploy"]
